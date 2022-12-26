@@ -1,0 +1,26 @@
+.container-fluid  a {
+    color: aliceblue;
+  }
+  .nav-item{
+    color: rgb(105, 160, 3);
+  }
+  
+  ul li{
+   
+    border-radius: 5px;
+  }
+  ul li:hover{
+    background-color:rgb(154, 228, 17);
+    transition: all 0.4s ease;
+  }
+  
+  #loginBtn{
+    border: 1px solid rgb(154, 228, 17);
+    color: rgb(154, 228, 17);
+  }
+  #loginBtn:hover{
+   
+    background-color: rgb(154, 228, 17);
+    transition: all 0.4s ease;
+    color: white;
+  }

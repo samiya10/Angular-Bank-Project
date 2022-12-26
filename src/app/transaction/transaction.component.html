@@ -1,0 +1,65 @@
+<div class="container-fluid bg-light">
+    <div class="row p-3">
+      <div class="col-sm-6 p-5">
+        <img src="../../assets/images/transaction.jpg" width="100%" height="100%" class="rounded shadow-lg" style="object-fit:contain;">
+      </div>
+      <div class="col-sm-6">
+        <p class="h1 text-center">TRANSACTION</p>
+      <div class="form p-5" >
+        <form class="row g-3" #transactionForm="ngForm" (ngSubmit)="transactionInfo(transactionForm.value)">
+            <div class="col-12">
+                <label for="tnumber" class="form-label">Transaction Number</label>
+                <input type="text" class="form-control" id="tnumber" maxlength="6" placeholder="Enter your Transaction Number: e.g-T00001" required name="tnumber" ngModel>
+            </div>
+            <div class="col-12">
+              <label for="accnumber" class="form-label">Account No</label>
+              <input type="text" class="form-control" id="accnumber" maxlength="6" placeholder="Enter your Account No: e.g-A00001" required name="accnumber" ngModel>
+            </div>
+            <div class="col-12">
+              <label for="dot" class="form-label">Date of Transaction</label>
+              <input type="date" class="form-control" id="dot" required name="dot" ngModel>
+            </div>
+            <div class="col-md-6">
+                <label for="medium_of_transaction" class="form-label" >Medium of Transaction</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="medium_of_transaction" checked name="medium_of_transaction" ngModel>
+                  <label class="form-check-label" for="medium_of_transaction">
+                    Cash
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="medium_of_transaction" id="flexRadioDefault2" ngModel>
+                  <label class="form-check-label" for="medium_of_transaction">
+                    Cheque
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="transaction_type" class="form-label" >Type of Transaction</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="transaction_type" id="transaction_type" checked ngModel>
+                  <label class="form-check-label" for="transaction_type">
+                    Deposit
+                  </label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="transaction_type" id="transaction_type" ngModel>
+                  <label class="form-check-label" for="transaction_type">
+                    Withdrawal
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="transaction_amount" class="form-label">Transaction Amount</label>
+                <input type="number" class="form-control" id="transaction_amount" placeholder="Enter the Amount" required name="transaction_amount" ngModel>
+              </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary px-5">Submit</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+

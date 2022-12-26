@@ -1,0 +1,62 @@
+<div class="container-fluid bg-light">
+    <div class="row p-3">
+      <div class="col-sm-6 p-5">
+        <img src="../../assets/images/customer.jpg" width="100%" height="100%" class="rounded shadow-lg" style="object-fit:contain;">
+      </div>
+      <div class="col-sm-6">
+        <p class="h1 text-center">CUSTOMER</p>
+      <div class="form p-5">
+        <form class="row g-3" #customerForm="ngForm" (ngSubmit)="customerInfo(customerForm.value)">
+            <div class="col-12">
+                <label for="custid" class="form-label">Customer Id</label>
+                <input type="text" class="form-control" id="custid" maxlength="6" placeholder="Enter your Customer Id: e.g-C00001" required name="custid" ngModel>
+            </div>
+            <div class="col-md-4">
+                <label for="fname" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="fname" maxlength="25" placeholder="Enter your First Name" required name="fname" ngModel>
+            </div>
+            <div class="col-md-4">
+                <label for="mname" class="form-label">Middle Name</label>
+                <input type="text" class="form-control" id="mname" maxlength="25" placeholder="Enter your Middle Name" name="mname" ngModel>
+            </div>
+            <div class="col-md-4">
+                <label for="ltname" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="ltname" maxlength="25" placeholder="Enter your Middle Name" required name="ltname" ngModel>
+            </div>
+            <div class="col-md-6">
+                <label for="city" class="form-label" >City</label>
+                <select id="city" class="form-select" name="city" ngModel>
+                  <option selected>Choose your City</option>
+                  <option value="Delhi">Delhi</option>
+                  <option value="Mumbai">Mumbai</option>
+                  <option value="Kolkata">Kolkata</option>
+                  <option value="Chennai">Chennai</option>
+                </select>
+              </div>
+
+            <div class="col-md-6">
+              <label for="mobileno" class="form-label">Mobile No</label>
+              <input type="tel" class="form-control" id="mobileno" maxlength="10" placeholder="xx-xxxx-xxxx" required name="mobileno" ngModel>
+            </div>
+            <div class="col-md-6">
+                <label for="occupation" class="form-label" >Occupation</label>
+                <select id="occupation" class="form-select" name="occupation" ngModel>
+                  <option selected>Choose your Occupation</option>
+                  <option value="Service">Service</option>
+                  <option value="Student">Student</option>
+                  <option value="Housewife">Housewife</option>
+                </select>
+              </div>
+            <div class="col-md-6">
+              <label for="dob" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" required name="dob" ngModel>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary px-5">Submit</button>
+            </div>
+          </form>
+
+      </div>
+    </div>
+  </div>
+</div>
