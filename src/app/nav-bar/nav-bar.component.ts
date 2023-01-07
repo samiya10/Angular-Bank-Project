@@ -10,6 +10,7 @@ import {faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faGoogle} from "@fortawesome/free-brands-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import { FormControl,FormGroup,Validator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-nav-bar',
@@ -29,7 +30,21 @@ export class NavBarComponent {
   faGoogle=faGoogle;
   faGithub=faGithub;
 
-  signUp(data:object):void{
-    console.warn(data)
+  loginForm=new FormGroup({
+    email:new FormControl("",[Validators.required,Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
+    password:new FormControl("",[Validators.required,Validators.minLength(8),Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")])
+  })
+
+  get email(){
+    return this.loginForm.get("email")
+  }
+
+  get password(){
+    return this.loginForm.get("password")
+  }
+
+  loginUser(){
+    console.warn(this.loginForm.value)
+    
   }
 }

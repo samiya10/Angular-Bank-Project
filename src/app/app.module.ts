@@ -12,8 +12,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { LoanComponent } from './loan/loan.component';
 import { BranchComponent } from './branch/branch.component';
 import { TransactionComponent } from './transaction/transaction.component';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +30,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
